@@ -4,11 +4,10 @@
 
 ### Connect with me:
 
-<!-- [<img align="left" alt="codeSTACKr.com" width="22px" src="https://raw.githubusercontent.com/iconic/open-iconic/master/svg/globe.svg" />][website] -->
-[<img align="left" alt="codeSTACKr | YouTube" width="22px" src="https://www.iconsdb.com/icons/preview/white/youtube-3-xxl.png" />]()
-[<img align="left" alt="codeSTACKr | Twitter" width="22px" src="https://www.iconsdb.com/icons/preview/white/twitter-3-xxl.png" />]()
-[<img alt="" width="22px" src="https://www.iconsdb.com/icons/preview/white/linkedin-3-xxl.png"/>]()
-[<img align="left" alt="codeSTACKr | Instagram" width="22px" src="https://www.iconsdb.com/icons/preview/white/instagram-xxl.png" />]()
+[<img align="left" alt="codeSTACKr | YouTube" width="22px" src="https://www.iconsdb.com/icons/preview/white/youtube-3-xxl.png" />](https://www.youtube.com/channel/UC8U5QJeiECJGIdC4FhVkQbQ)
+[<img align="left" alt="codeSTACKr | Twitter" width="22px" src="https://www.iconsdb.com/icons/preview/white/twitter-3-xxl.png" />](https://twitter.com/hr_arsha)
+[<img alt="" width="22px" src="https://www.iconsdb.com/icons/preview/white/linkedin-3-xxl.png"/>](https://www.linkedin.com/in/alireza-shabanpour/)
+[<img align="left" alt="codeSTACKr | Instagram" width="22px" src="https://www.iconsdb.com/icons/preview/white/instagram-xxl.png" />](https://www.instagram.com/hr_arsha/)
 
 
 ![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=Hr-ArshA&show_icons=true&bg_color=22272e&text_color=e1e1e1&hide_border=True)
