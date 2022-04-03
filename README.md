@@ -10,8 +10,6 @@
 [<img align="left" alt="codeSTACKr | Instagram" width="22px" src="https://www.iconsdb.com/icons/preview/white/instagram-xxl.png" />](https://www.instagram.com/hr_arsha/)
 
 
-![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=Hr-ArshA&show_icons=true&bg_color=22272e&text_color=e1e1e1&hide_border=True)
-
 <br>
 
 
