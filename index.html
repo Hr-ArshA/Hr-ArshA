@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nicolas Cage: Good or Bad?</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @keyframes cageSpin {
+            0% { transform: rotate(0deg) scale(1); }
+            25% { transform: rotate(5deg) scale(1.05); }
+            50% { transform: rotate(0deg) scale(1.1); }
+            75% { transform: rotate(-5deg) scale(1.05); }
+            100% { transform: rotate(0deg) scale(1); }
+        }
+        
+        .cage-hover:hover {
+            animation: cageSpin 0.5s infinite;
+        }
+        
+        .cage-pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(234, 179, 8, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(234, 179, 8, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(234, 179, 8, 0); }
+        }
+        
+        .cage-bg {
+            background: linear-gradient(135deg, #fcd34d 0%, #f59e0b 50%, #b45309 100%);
+        }
+    </style>
+</head>
+<body class="min-h-screen cage-bg flex flex-col items-center justify-center p-4">
+    <div class="max-w-4xl w-full bg-white/90 backdrop-blur-md rounded-2xl shadow-2xl overflow-hidden">
+        <!-- Header -->
+        <div class="bg-gradient-to-r from-amber-500 to-amber-700 p-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-2 font-serif">NICOLAS CAGE</h1>
+            <h2 class="text-2xl md:text-3xl font-semibold text-amber-100">The Eternal Question...</h2>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="p-6 md:p-10">
+            <div class="flex flex-col md:flex-row items-center gap-8 mb-10">
+                <div class="w-full md:w-1/2">
+                    <img 
+                        src="https://m.media-amazon.com/images/M/MV5BMjUxMjE4MTQxMF5BMl5BanBnXkFtZTcwNzc2MDM1NA@@._V1_.jpg" 
+                        alt="Nicolas Cage" 
+                        class="w-full h-auto rounded-lg shadow-lg cage-hover transition-all duration-300 border-4 border-amber-400"
+                        id="cageImage"
+                    >
+                </div>
+                <div class="w-full md:w-1/2 text-center md:text-left">
+                    <h3 class="text-3xl font-bold text-amber-800 mb-4">Good or Bad?</h3>
+                    <p class="text-gray-700 mb-6 text-lg">
+                        The debate has raged for decades. Is Nicolas Cage a cinematic genius or an over-the-top meme machine? 
+                        Cast your vote below and join the eternal discussion about Hollywood's most enigmatic actor.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                        <button 
+                            id="goodBtn"
+                            class="px-8 py-3 bg-green-600 hover:bg-green-700 text-white font-bold rounded-full transition-all flex items-center justify-center gap-2"
+                        >
+                            <i class="fas fa-thumbs-up"></i> Definitely Good!
+                        </button>
+                        <button 
+                            id="badBtn"
+                            class="px-8 py-3 bg-red-600 hover:bg-red-700 text-white font-bold rounded-full transition-all flex items-center justify-center gap-2"
+                        >
+                            <i class="fas fa-thumbs-down"></i> So Bad It's Good
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Results Section -->
+            <div class="bg-amber-50 rounded-xl p-6 shadow-inner border border-amber-200">
+                <h3 class="text-2xl font-bold text-amber-800 mb-4 text-center">Community Verdict</h3>
+                
+                <div class="flex flex-col md:flex-row gap-6 items-center">
+                    <div class="w-full md:w-1/2">
+                        <div class="flex justify-between mb-2">
+                            <span class="font-medium text-green-700">Good</span>
+                            <span class="font-medium text-green-700" id="goodPercent">68%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-6">
+                            <div id="goodBar" class="bg-green-600 h-6 rounded-full" style="width: 68%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="w-full md:w-1/2">
+                        <div class="flex justify-between mb-2">
+                            <span class="font-medium text-red-700">Bad</span>
+                            <span class="font-medium text-red-700" id="badPercent">32%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-6">
+                            <div id="badBar" class="bg-red-600 h-6 rounded-full" style="width: 32%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-6 text-center">
+                    <p id="voteMessage" class="text-gray-600 italic">Cast your vote to see the results change!</p>
+                </div>
+            </div>
+            
+            <!-- Cage Facts -->
+            <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="bg-white p-4 rounded-lg shadow border border-amber-100 hover:shadow-lg transition-all">
+                    <div class="text-amber-500 mb-2">
+                        <i class="fas fa-trophy text-2xl"></i>
+                    </div>
+                    <h4 class="font-bold text-lg text-amber-800">Oscar Winner</h4>
+                    <p class="text-gray-600">Won Best Actor for "Leaving Las Vegas" in 1996</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow border border-amber-100 hover:shadow-lg transition-all">
+                    <div class="text-amber-500 mb-2">
+                        <i class="fas fa-film text-2xl"></i>
+                    </div>
+                    <h4 class="font-bold text-lg text-amber-800">Prolific Actor</h4>
+                    <p class="text-gray-600">Has appeared in over 100 films since 1981</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow border border-amber-100 hover:shadow-lg transition-all">
+                    <div class="text-amber-500 mb-2">
+                        <i class="fas fa-theater-masks text-2xl"></i>
+                    </div>
+                    <h4 class="font-bold text-lg text-amber-800">Range</h4>
+                    <p class="text-gray-600">From action to drama to comedy - he's done it all</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="bg-amber-800 text-amber-100 p-4 text-center">
+            <p>This important question must be answered by all of humanity</p>
+            <p class="text-xs mt-2">Not affiliated with Nicolas Cage or his amazing hairline</p>
+        </div>
+    </div>
+    
+    <!-- Cage Modal -->
+    <div id="cageModal" class="fixed inset-0 bg-black/80 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-xl max-w-md w-full p-6 relative">
+            <button id="closeModal" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="text-center">
+                <div class="text-6xl mb-4" id="modalEmoji"></div>
+                <h3 class="text-2xl font-bold mb-2" id="modalTitle"></h3>
+                <p class="text-gray-600 mb-4" id="modalText"></p>
+                <img 
+                    src="https://www.placecage.com/300/200" 
+                    alt="Nicolas Cage Reaction" 
+                    class="w-full rounded-lg mb-4"
+                    id="modalImage"
+                >
+                <button 
+                    id="modalBtn"
+                    class="px-6 py-2 bg-amber-500 hover:bg-amber-600 text-white font-bold rounded-full transition-all"
+                >
+                    Continue the Cage Journey
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Voting system
+        let goodVotes = 68;
+        let badVotes = 32;
+        const totalVotes = goodVotes + badVotes;
+        
+        // DOM elements
+        const goodBtn = document.getElementById('goodBtn');
+        const badBtn = document.getElementById('badBtn');
+        const goodPercent = document.getElementById('goodPercent');
+        const badPercent = document.getElementById('badPercent');
+        const goodBar = document.getElementById('goodBar');
+        const badBar = document.getElementById('badBar');
+        const voteMessage = document.getElementById('voteMessage');
+        const cageImage = document.getElementById('cageImage');
+        
+        // Modal elements
+        const cageModal = document.getElementById('cageModal');
+        const modalEmoji = document.getElementById('modalEmoji');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalText = document.getElementById('modalText');
+        const modalImage = document.getElementById('modalImage');
+        const modalBtn = document.getElementById('modalBtn');
+        const closeModal = document.getElementById('closeModal');
+        
+        // Cage images array
+        const cageImages = [
+            'https://www.placecage.com/500/500',
+            'https://www.placecage.com/g/500/500',
+            'https://www.placecage.com/c/500/500',
+            'https://www.placecage.com/gif/500/500'
+        ];
+        
+        // Vote handlers
+        goodBtn.addEventListener('click', () => {
+            goodVotes++;
+            updateVotes();
+            showModal(
+                '🎭',
+                'A True Connoisseur!',
+                'You recognize the genius of Cage. His emotional range is unmatched, from subtle whispers to glorious overacting.',
+                'https://www.placecage.com/c/300/200'
+            );
+        });
+        
+        badBtn.addEventListener('click', () => {
+            badVotes++;
+            updateVotes();
+            showModal(
+                '🤯',
+                'So Bad It\'s Art!',
+                'You appreciate Cage in all his chaotic glory. Even his "bad" performances are unforgettable masterpieces.',
+                'https://www.placecage.com/g/300/200'
+            );
+        });
+        
+        // Update vote display
+        function updateVotes() {
+            const newTotal = goodVotes + badVotes;
+            const goodPct = Math.round((goodVotes / newTotal) * 100);
+            const badPct = Math.round((badVotes / newTotal) * 100);
+            
+            goodPercent.textContent = `${goodPct}%`;
+            badPercent.textContent = `${badPct}%`;
+            
+            goodBar.style.width = `${goodPct}%`;
+            badBar.style.width = `${badPct}%`;
+            
+            voteMessage.textContent = `Thank you for voting! The Cage debate continues with ${newTotal} total votes.`;
+            
+            // Change Cage image randomly
+            const randomImage = cageImages[Math.floor(Math.random() * cageImages.length)];
+            cageImage.src = randomImage;
+        }
+        
+        // Modal functions
+        function showModal(emoji, title, text, image) {
+            modalEmoji.textContent = emoji;
+            modalTitle.textContent = title;
+            modalText.textContent = text;
+            modalImage.src = image;
+            cageModal.classList.remove('hidden');
+        }
+        
+        function hideModal() {
+            cageModal.classList.add('hidden');
+        }
+        
+        modalBtn.addEventListener('click', hideModal);
+        closeModal.addEventListener('click', hideModal);
+        
+        // Randomly pulse the vote buttons
+        setInterval(() => {
+            if (Math.random() > 0.7) {
+                goodBtn.classList.add('cage-pulse');
+                setTimeout(() => goodBtn.classList.remove('cage-pulse'), 2000);
+            }
+            
+            if (Math.random() > 0.7) {
+                badBtn.classList.add('cage-pulse');
+                setTimeout(() => badBtn.classList.remove('cage-pulse'), 2000);
+            }
+        }, 5000);
+        
+        // Easter egg - change Cage face on image click
+        cageImage.addEventListener('click', () => {
+            const randomImage = cageImages[Math.floor(Math.random() * cageImages.length)];
+            cageImage.src = randomImage;
+            
+            // Small bounce effect
+            cageImage.classList.add('animate-bounce');
+            setTimeout(() => cageImage.classList.remove('animate-bounce'), 1000);
+        });
+    </script>
+</body>
+</html>
